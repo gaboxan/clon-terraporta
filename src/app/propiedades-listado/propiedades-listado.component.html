@@ -1,1 +1,115 @@
-<button (click)="mostrarP()" class="btn btn-success" style="margin-top: 100px;">mostrar params</button>
+<body >
+  <h1 style="margin: 80px auto; width: 1100px">Todas las propiedades</h1>
+  <div class="container">
+    <div id="searchs" class="row">
+      <div class="col" style="margin-top: 5px">
+        <h5 class="h5Search">Operación:</h5>
+        <select
+          [(ngModel)]="selectedOperacion"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option value="" selected>Todas las operaciones</option>
+          <option value="Venta">Venta</option>
+          <option value="Arriendo">Arriendo</option>
+        </select>
+      </div>
+      <div class="col" style="margin-top: 5px">
+        <h5 class="h5Search">Tipos:</h5>
+        <select
+          [(ngModel)]="selectedTipo"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option value="" >Todos los tipos</option>
+          <option value="1" >Sitios</option>
+          <option value="2">Bodega</option>
+          <option value="Casa">Casa</option>
+          <option value="Departamento">Departamento</option>
+          <option value="5">Galpon</option>
+          <option value="7">Local comercial</option>
+          <option value="8">Oficina</option>
+          <option value="9">Parcela de agrado</option>
+          <option value="10">Predio agrado</option>
+        </select>
+      </div>
+      <div class="col">
+        <h5 class="h5Search">Valor desde:</h5>
+        <mat-form-field class="example-form-field">
+          <mat-label>$</mat-label>
+
+          <input
+            [(ngModel)]="valorDesde"
+            matInput
+            type="number"
+            placeholder="100.000"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <h5 class="h5Search">Valor hasta:</h5>
+        <mat-form-field class="example-form-field">
+          <mat-label>$</mat-label>
+
+          <input
+            [(ngModel)]="valorHasta"
+            matInput
+            type="number"
+            placeholder="100.000"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="col">
+        <button (click)="aplicarFiltros()" class="btn btn-search">
+          <b>Buscar</b>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        *ngFor="let carta of cartasFiltradas; let i = index"
+        class="col-sm-12 col-md-4"
+      >
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ cartasFiltradas[i].agente }}</mat-card-title>
+            <mat-card-subtitle>Nuestro agente</mat-card-subtitle>
+          </mat-card-header>
+          <div class="card text-bg-dark img-card ">
+            <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay overlay1">
+              <button (click)="goDetails(cartasFiltradas[i].propertyid)"  class="btn btn-details">Ver detalles  <i class="fa-solid fa-arrow-right icono"></i></button>
+            </div>
+          </div>
+         
+          <div class="short-description">
+            <div class="row m-1">
+              <div class="col-sm-12 col-md-4">
+                <i class="fa-sharp fa-solid fa-ruler fa-lg"></i>{{cartasFiltradas[i].metrosCuadrados}}
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <i class="fa-solid fa-bed fa-lg"></i> {{cartasFiltradas[i].habitaciones}}
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <i class="fa-solid fa-shower fa-lg"></i> {{cartasFiltradas[i].banos}} Baños
+              </div>
+            </div>
+          </div>
+          <mat-card-content>
+            <h5 (click)="goDetails(cartasFiltradas[i].propertyid)" class="titles-propiedades">{{cartasFiltradas[i].titulo}}</h5>
+            <p>
+              {{ cartasFiltradas[i].ubicacion }}
+            </p>
+            <p>
+              <b>{{
+                cartasFiltradas[i].precio | currency : "" : "symbol" : "0.0-0"
+              }}</b>
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,126 @@
+@media (max-width: 774px) {
+    #detalles-propiedad {
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center; /* Centra los elementos en el eje horizontal */
+        text-align: center; /* Centra el texto en el centro */
+        width: auto; /* Restaura el ancho automático para que se ajuste al contenido */
+    }
+    h4{
+        margin-left: 20%;
+    }
+    p{
+        text-align: center;
+    }
+    
+    #carouselExampleIndicators{
+        max-width: 100%;
+        width: auto; 
+    }
+    .card-mobile{
+     
+      margin: auto;
+    }
+ 
+   
+  }
+  @media (min-width: 667px) {
+  .cartas{
+    width: 800px; margin: auto;
+  }
+   
+  }
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .short-description{
+    background-color: rgb(207, 87, 17);
+    height: auto;
+    padding: 2px;
+    color: aliceblue;
+    border-radius: 3px;
+  }
+  .titles-propiedades{
+    font-family: "Open Sans", sans-serif;
+    margin-top: 3px;
+    transition: 0.6s;
+    font-weight: bold;
+    cursor: pointer;
+    
+  }
+  .titles-propiedades:hover{
+    color: rgb(207, 87, 17);
+  }
+  .img-card {
+    transition: 0.5s;
+  
+    .btn-details {
+      transition: 0.5s;
+      opacity: 0;
+      margin: 30%;
+      height: 60px;
+    
+      
+      
+    }
+    .overlay1{
+      transform: scale(0.1);
+      transition: 0.5s;
+      opacity: 0;
+    }
+  }
+  
+  .img-card:hover {
+   .overlay1{
+    transform: scale(1);
+    background-color: brown;
+    opacity: 1;
+   }
+    .btn-details {
+      opacity: 1;
+      color: rgb(255, 255, 255);
+      background-color: transparent;
+      border: 1px solid white;
+      
+     
+    }
+    .btn-details:hover {
+      opacity: 1;
+      color: rgb(207, 87, 17);
+      background-color: white;
+      .icono{
+        transform: translateX(3px);
+      }
+     
+    }
+  }
+  .btn-prevnext{
+    background-color:rgb(207, 87, 17) ;
+    color: white;
+    transition: .5s;
+  }
+  .btn-prevnext:hover{
+    background-color: rgb(105, 113, 119);
+    color: black;
+  }
+  .clickableText{
+    transition: 0.5s;
+   
+   display: inline;
+    .nc{
+      transition: 0.5s;
+    }
+  }
+  .clickableText:hover{
+    color:rgb(207, 87, 17);
+    cursor: pointer;
+    .nc{
+      color:black
+    }
+  }

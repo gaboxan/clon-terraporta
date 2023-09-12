@@ -1,0 +1,208 @@
+<div id="detalles-propiedad" class="d-flex p-5" style="margin-top: 100px">
+  <div class="p-2 flex-fill">
+    <div
+      style="border: 1px solid"
+      id="carouselExampleIndicators"
+      class="carousel slide"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../../assets/img/carroussel/bodega1.webp"
+            height="500px"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../assets/img/carroussel/edificio1.gif"
+            height="500px"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../assets/img/carroussel/casa1.jpg"
+            height="500px"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <h3 style="text-align: center; margin-top: 25px">
+      {{detalles[0].titulo}}
+    </h3>
+    <p>Ubicación: <b>{{detalles[0].ubicacion}}</b></p>
+    <div class="row justify-content-center">
+      <div class="col-md-3 text-center">
+        <i class="far fa-square fa-2x"></i>
+        <h5><b>{{detalles[0].metrosCuadrados}}</b></h5>
+        <h5>{{detalles[0].tipoterreno}}</h5>
+      </div>
+      <div class="col-md-3 text-center">
+        <i class="far fa-money-bill-1 fa-2x"></i>
+        <h5><b>{{detalles[0].precio | currency : "" : "symbol" : "0.0-0"}}</b></h5>
+        <h5>Venta</h5>
+      </div>
+     
+    
+    </div>
+    <h4 style="text-align: start; margin-top: 25px">DESCRIPCIÓN PROPIEDAD</h4>
+    <div class="container">
+      <p>
+       {{detalles[0].descripcion}}
+      </p>
+    </div>
+  </div>
+  <div class="p-2 flex-fill">
+    <h5>
+      Contactar
+      <p style="color: rgb(207, 87, 17)">NUESTRO AGENTE</p>
+    </h5>
+    <img
+      src="https://www.terraporta.cl/Docs/Empresa/101/GCv_356153021092.png"
+      alt=""
+    />
+    <h5 style="font-weight: bold">{{detalles[0].agente}}</h5>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col" style="text-align: start">
+          <b>Fono:</b>
+        </div>
+        <div class="col clickableText">{{detalles[0].fono}}</div>
+      </div>
+      <div class="row">
+        <div class="col" style="text-align: start">
+          <b>Correo:</b>
+        </div>
+        <div class="col clickableText">{{detalles[0].correo}}</div>
+      </div>
+    </div>
+    <div class="container" style="text-align: center">
+      <img
+        src="../../assets/img/logo/whatsapp.png"
+        style="margin: 5px; cursor: pointer"
+        width="120"
+        alt=""
+      />
+    </div>
+    <h5>
+      COMPARTIR
+      <p style="color: rgb(207, 87, 17)">REDES SOCIALES</p>
+    </h5>
+    <div class="d-flex flex-column mb-3">
+      <div class="p-2">
+        <p class="clickableText">
+          <i class="fa-brands fa-facebook-f fa-sm nc"></i> Compartir en Facebook
+        </p>
+      </div>
+      <div class="p-2">
+        <p class="clickableText">
+          <i class="fa-brands fa-x-twitter nc"></i> Compartir en X
+        </p>
+      </div>
+      <div class="p-2">
+        <p class="clickableText">
+          <i class="fa-brands fa-whatsapp nc"></i> Whatsapp
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-between p-5 cartas">
+  <button class="btn btn-prevnext">
+    <i class="fa-solid fa-backward-step"></i> PROPIEDAD ANTERIOR
+  </button>
+  <button class="btn btn-prevnext">
+    <i class="fa-solid fa-forward-step"></i> PROPIEDAD SIGUIENTE
+  </button>
+</div>
+<div class="row cartas">
+  <div *ngFor="let detalles of showOthers; let i = index" class="col-sm-12 col-md-6">
+    <mat-card class="example-card card-mobile">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{showOthers[i].agente}}</mat-card-title>
+        <mat-card-subtitle>Nuestro agente</mat-card-subtitle>
+      </mat-card-header>
+      <div class="card text-bg-dark img-card">
+        <img
+          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          class="card-img"
+          alt="..."
+        />
+        <div class="card-img-overlay overlay1">
+          <button (click)="goDetails(showOthers[i].id)"  class="btn btn-details">
+            Ver detalles <i class="fa-solid fa-arrow-right icono"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="short-description">
+        <div class="row m-1">
+          <div class="col-sm-12 col-md-4">
+            <i class="fa-sharp fa-solid fa-ruler fa-lg"></i>{{showOthers[i].metrosCuadrados}}
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <i class="fa-solid fa-bed fa-lg"></i> {{showOthers[i].habitaciones}}
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <i class="fa-solid fa-shower fa-lg"></i>{{showOthers[i].banos}}
+          </div>
+        </div>
+      </div>
+      <mat-card-content>
+        <h5 (click)="goDetails(showOthers[i].id)" class="titles-propiedades">{{showOthers[i].titulo}}</h5>
+        <p>Ubicación: {{showOthers[i].ubicacion}}</p>
+        <p>
+          <b>{{showOthers[i].precio | currency : "" : "symbol" : "0.0-0"}}</b>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+ 
+  
+</div>

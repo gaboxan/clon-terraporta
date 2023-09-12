@@ -1,0 +1,94 @@
+<div class="d-flex flex-column pc" style="margin-top: 100px">
+  <div class="p-2">
+    <h1>Contacto</h1>
+    <br />
+    <p>
+      Para contactarse con nosotros favor utilizar el formulario abajo o a
+      nuestro numero de telefono
+    </p>
+  </div>
+  <div class="p-2">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 mb-3">
+        <h2>ENVIANOS UN MENSAJE</h2>
+        <br />
+        <form class="example-form">
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" [formControl]="emailFormControl" />
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Ingrese un <strong>Nombre</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Email</mat-label>
+            <input
+              type="email"
+              matInput
+              [formControl]="emailFormControl"
+              placeholder="Ex. pat@example.com"
+            />
+            <mat-error
+              *ngIf="
+                emailFormControl.hasError('email') &&
+                !emailFormControl.hasError('required')
+              "
+            >
+              Por favor ingrese un email válido
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Ingrese un <strong>correo</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field
+            style="height: 200px"
+            class="example-full-width w-100"
+          >
+            <mat-label>Mensaje</mat-label>
+            <input type="text" matInput [formControl]="emailFormControl" />
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Ingrese un <strong>mensaje</strong>
+            </mat-error>
+          </mat-form-field>
+          <button class="btn btn-search" type="submit">ENVIAR MENSAJE</button>
+        </form>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <h1>DATOS DE CONTACTO</h1>
+        <br />
+        <p><i class="fa-solid fa-phone-volume fa-xl"></i> 432542285</p>
+        <p>
+          <i class="fa-regular fa-envelope-open fa-xl"></i>
+          coordinacion@terraporta.cl
+        </p>
+        <p><i class="fa-solid fa-tv fa-xl"></i> www.terraporta.cl</p>
+        <p>
+          <i class="fa-solid fa-map-pin fa-xl"></i> Avenida Gabriela Mistral
+          146, Los Angeles, Chile
+        </p>
+        <div class="row" style="width: 100px;">
+          <div class="col-md-4 col-sm-4">  <div class="rrss-icons">
+            <i
+              class="fa-brands fa-facebook-f fa-fade fa-lg"
+              style="margin: 5px; color: wheat"
+            ></i>
+          </div></div>
+          <div class="col-md-4 col-sm-4"> <div class="rrss-icons">
+            <i
+              class="fa-brands fa-x-twitter fa-lg"
+              style="margin: 5px; color: wheat"
+            ></i>
+          </div></div>
+          <div class="col-md-4 col-sm-4"> <div class="rrss-icons">
+            <i
+              class="fa-brands fa-instagram fa-lg"
+              style="margin: 5px; color: wheat"
+            ></i>
+          </div></div>
+        </div>
+        
+       
+      </div>
+    </div>
+  </div>
+</div>

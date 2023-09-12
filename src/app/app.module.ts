@@ -7,18 +7,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarrousselComponent } from './carroussel/carroussel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDividerModule} from '@angular/material/divider';
 import { PropiedadesListadoComponent } from './propiedades-listado/propiedades-listado.component';
+import {MatCardModule} from '@angular/material/card';
+import { PropiedadDetallesComponent } from './propiedad-detalles/propiedad-detalles.component';
+import { ContactoComponent } from './contacto/contacto.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CarrousselComponent,
-    PropiedadesListadoComponent
+    PropiedadesListadoComponent,
+    PropiedadDetallesComponent,
+    ContactoComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,9 @@ import { PropiedadesListadoComponent } from './propiedades-listado/propiedades-l
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

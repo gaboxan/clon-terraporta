@@ -1,0 +1,31 @@
+@media (min-width: 667px) {
+    .pc{
+      width: 1200px; margin: auto;
+    }
+}
+.btn-search {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(207, 87, 17);
+    transition: 0.6s;
+    color: aliceblue;
+  
+  }
+  .btn-search:hover {
+    color: rgb(29, 27, 27);
+    background-color: rgb(107, 107, 93);
+    
+  }
+  .rrss-icons {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid white;
+    transition: .6s;
+  }
+  .rrss-icons:hover{
+   background-color: rgb(207, 87, 17);
+   cursor: pointer;
+  }
