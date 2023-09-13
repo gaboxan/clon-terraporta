@@ -69,11 +69,11 @@
     <div class="row">
       <div
         *ngFor="let carta of cartasFiltradas; let i = index"
-        class="col-sm-12 col-md-4"
+        class="col-sm-12 col-md-4 mt-2"
       >
         <mat-card class="example-card">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="example-header-image" [style.backgroundImage]="'url(' + cartasFiltradas[i].image + ')'"> </div>
             <mat-card-title>{{ cartasFiltradas[i].agente }}</mat-card-title>
             <mat-card-subtitle>Nuestro agente</mat-card-subtitle>
           </mat-card-header>

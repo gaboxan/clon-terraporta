@@ -103,7 +103,7 @@
       <p style="color: rgb(207, 87, 17)">NUESTRO AGENTE</p>
     </h5>
     <img
-      src="https://www.terraporta.cl/Docs/Empresa/101/GCv_356153021092.png"
+      src="{{detalles[0].image}}"
       alt=""
     />
     <h5 style="font-weight: bold">{{detalles[0].agente}}</h5>
@@ -153,18 +153,18 @@
   </div>
 </div>
 <div class="d-flex justify-content-between p-5 cartas">
-  <button class="btn btn-prevnext">
+  <button (click)="goDetails(showOthers[0].id)" class="btn btn-prevnext">
     <i class="fa-solid fa-backward-step"></i> PROPIEDAD ANTERIOR
   </button>
-  <button class="btn btn-prevnext">
+  <button (click)="goDetails(showOthers[1].id)" class="btn btn-prevnext mobile">
     <i class="fa-solid fa-forward-step"></i> PROPIEDAD SIGUIENTE
   </button>
 </div>
-<div class="row cartas">
-  <div *ngFor="let detalles of showOthers; let i = index" class="col-sm-12 col-md-6">
+<div class="row cartas ">
+  <div *ngFor="let detalles of showOthers; let i = index" class="col-sm-12 col-md-6 mt-2">
     <mat-card class="example-card card-mobile">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
+        <div mat-card-avatar class="example-header-image" [style.backgroundImage]="'url(' + showOthers[i].avatar + ')'"></div>
         <mat-card-title>{{showOthers[i].agente}}</mat-card-title>
         <mat-card-subtitle>Nuestro agente</mat-card-subtitle>
       </mat-card-header>

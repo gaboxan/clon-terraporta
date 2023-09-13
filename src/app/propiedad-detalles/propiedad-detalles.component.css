@@ -6,6 +6,9 @@
         text-align: center; /* Centra el texto en el centro */
         width: auto; /* Restaura el ancho automático para que se ajuste al contenido */
     }
+    .mobile{
+      margin-left: 4px;
+    }
     h4{
         margin-left: 20%;
     }
@@ -35,7 +38,7 @@
   }
   
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+   
     background-size: cover;
   }
 

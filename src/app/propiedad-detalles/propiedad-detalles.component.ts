@@ -10,6 +10,8 @@ export class PropiedadDetallesComponent {
   propertyId: number;
   detalles = [
     {
+      avatar: '../../assets/img/agentes/2.jpg',
+      image: 'https://www.terraporta.cl/Docs/Empresa/101/GCv_329115521770.png',
       id:'1',
       fono: '+569 99772206',
       correo: 'nataliarios@terraporta.cl',
@@ -25,6 +27,8 @@ export class PropiedadDetallesComponent {
         'Camino Antuco a pocos minutos de la ciudad, se encuentran estas hermosas parcelas de 5000m2. Los sitios son parte de un proyecto de subdivisión con rol asignado, cuentan con camino y luz soterrada. A solo 5 km de Los Ángeles',
     },
     {
+      avatar: '../../assets/img/agentes/1.jpg',
+      image: 'https://www.terraporta.cl/Docs/Empresa/101/GCv_356153021092.png',
       id:'2',
       fono: '+569 76143615',
       correo: 'consueloarias@terraporta.cl',
@@ -40,6 +44,8 @@ export class PropiedadDetallesComponent {
         'Camino Antuco a pocos minutos de la ciudad, se encuentran estas hermosas parcelas de 5000m2. Los sitios son parte de un proyecto de subdivisión con rol asignado, cuentan con camino y luz soterrada. A solo 5 km de Los Ángeles',
     },
     {
+      avatar: '../../assets/img/agentes/1.jpg',
+      image: 'https://www.terraporta.cl/Docs/Empresa/101/GCv_356153021092.png',
       id:'3',
       fono: '+569 76143615',
       correo: 'consueloarias@terraporta.cl',

@@ -19,6 +19,7 @@ export class PropiedadesListadoComponent implements OnInit {
 
   cartas = [
     {
+      image: '../../assets/img/agentes/1.jpg',
       titulo: 'Condominio Granja Osiris',
       agente: 'Consuelo Arias',
       ubicacion: 'Los Ángeles Camino el Natre',
@@ -31,6 +32,7 @@ export class PropiedadesListadoComponent implements OnInit {
       propertyid:3
     },
     {
+      image: '../../assets/img/agentes/2.jpg',
       titulo: 'Sector El Huertón, Camino Antuco',
       agente: 'Consuelo Arias',
       ubicacion: 'Los Ángeles Camino Antuco',
@@ -43,6 +45,7 @@ export class PropiedadesListadoComponent implements OnInit {
       propertyid:1
     },
     {
+      image: '../../assets/img/agentes/1.jpg',
       titulo: 'Casa Nueva, Condominio Bosque Laguna',
       agente: 'Natalia Ríos',
       ubicacion: 'Los Ángeles Doctor Manuel Rioseco',

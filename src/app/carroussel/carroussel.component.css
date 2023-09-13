@@ -1,3 +1,9 @@
+#carouselExampleIndicators{
+    margin-bottom: -65px;
+    @media (max-width: 667px) {
+        margin-bottom: -230px;
+    }
+}
 .img-carroussel{
  width: 500px;
  height: 600px;
