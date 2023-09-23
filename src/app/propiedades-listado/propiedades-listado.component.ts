@@ -29,7 +29,8 @@ export class PropiedadesListadoComponent implements OnInit {
       metrosCuadrados: '130m2',
       habitaciones: 5,
       banos: 3,
-      propertyid:3
+      propertyid:3,
+      profile: 'https://www.brioinmobiliaria.cl/wp-content/uploads/2020/08/CASA-C-1-2-1536x864.jpg'     
     },
     {
       image: '../../assets/img/agentes/2.jpg',
@@ -42,7 +43,8 @@ export class PropiedadesListadoComponent implements OnInit {
       metrosCuadrados: '5000m2',
       habitaciones: 0,
       banos: 0,
-      propertyid:1
+      propertyid:1,
+      profile: 'https://d1cfu8v5n1wsm.cloudfront.net/toctoc/fotos/20180813/1066252/n_wm_2019080218230270280.webp'
     },
     {
       image: '../../assets/img/agentes/1.jpg',
@@ -55,7 +57,8 @@ export class PropiedadesListadoComponent implements OnInit {
       metrosCuadrados: '109m2',
       habitaciones: 3,
       banos: 3,
-      propertyid:2
+      propertyid:2,
+      profile: 'https://cache.enlaceinmobiliario.cl/EBBcarruselcollaocollao-63358e74b5e9b4.webp'
     },
   ];
   cartasFiltradas: any[] = [];

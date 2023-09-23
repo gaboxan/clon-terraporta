@@ -78,7 +78,7 @@
             <mat-card-subtitle>Nuestro agente</mat-card-subtitle>
           </mat-card-header>
           <div class="card text-bg-dark img-card ">
-            <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img" alt="...">
+            <img src={{cartasFiltradas[i].profile}} width="300" height="300" class="card-img" alt="...">
             <div class="card-img-overlay overlay1">
               <button (click)="goDetails(cartasFiltradas[i].propertyid)"  class="btn btn-details">Ver detalles  <i class="fa-solid fa-arrow-right icono"></i></button>
             </div>
