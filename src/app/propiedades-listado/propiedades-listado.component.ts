@@ -33,7 +33,7 @@ export class PropiedadesListadoComponent implements OnInit {
       profile: 'https://www.brioinmobiliaria.cl/wp-content/uploads/2020/08/CASA-C-1-2-1536x864.jpg'     
     },
     {
-      image: '../../assets/img/agentes/1.jpg',
+      image: '../../assets/img/agentes/2.jpg',
       titulo: 'Sector El Huertón, Camino Antuco',
       agente: 'Consuelo Arias',
       ubicacion: 'Los Ángeles Camino Antuco',
@@ -47,7 +47,7 @@ export class PropiedadesListadoComponent implements OnInit {
       profile: 'https://d1cfu8v5n1wsm.cloudfront.net/toctoc/fotos/20180813/1066252/n_wm_2019080218230270280.webp'
     },
     {
-      image: '../../assets/img/agentes/2.jpg',
+      image: '../../assets/img/agentes/1.jpg',
       titulo: 'Casa Nueva, Condominio Bosque Laguna',
       agente: 'Natalia Ríos',
       ubicacion: 'Los Ángeles Doctor Manuel Rioseco',
